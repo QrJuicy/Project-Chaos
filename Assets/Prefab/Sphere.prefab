@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5327514887507030971}
   - component: {fileID: 5327514887507030970}
   - component: {fileID: 5327514887507030969}
+  - component: {fileID: 251273918085541569}
   - component: {fileID: 5327514887507030968}
   m_Layer: 0
   m_Name: Sphere
@@ -119,6 +120,18 @@ NavMeshAgent:
   m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &251273918085541569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5327514887507030967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cee1ef57baac8b47bd83902e1319b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5327514887507030968
 MonoBehaviour:
   m_ObjectHideFlags: 0
