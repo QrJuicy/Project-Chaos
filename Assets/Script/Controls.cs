@@ -8,9 +8,14 @@ public class Controls : MonoBehaviour
     [SerializeField] float gravity;
     private CharacterController ctrl;
     [SerializeField] float speed;
+    public SpriteRenderer sprt;
+    private Transform trans;
     void Start()
     {
         ctrl = GetComponent<CharacterController>();
+        sprt = GetComponent<SpriteRenderer>();
+        sprt.flipX = false;
+        trans = GetComponent<Transform>();
     }
 
     void Update()
@@ -19,6 +24,18 @@ public class Controls : MonoBehaviour
         movement = move * Time.deltaTime * speed;
         movement += new Vector3 (0 , gravity * Time.deltaTime , 0);
         ctrl.Move(movement);              
+
+        if(Input.GetAxis("Horizontal") > 0)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+
+        if(Input.GetAxis("Horizontal") < 0)
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }    
+        
+        
     }
 
 }
