@@ -8,13 +8,10 @@ public class Controls : MonoBehaviour
     [SerializeField] float gravity;
     private CharacterController ctrl;
     [SerializeField] float speed;
-    public SpriteRenderer sprt;
     private Transform trans;
     void Start()
     {
         ctrl = GetComponent<CharacterController>();
-        sprt = GetComponent<SpriteRenderer>();
-        sprt.flipX = false;
         trans = GetComponent<Transform>();
     }
 
