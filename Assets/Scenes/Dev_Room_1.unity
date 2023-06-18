@@ -16014,6 +16014,14 @@ PrefabInstance:
       propertyPath: movePos
       value: 
       objectReference: {fileID: 1980084995}
+    - target: {fileID: 5327514887507030969, guid: d2df3701d4f072b40bd123545d914ea2, type: 3}
+      propertyPath: m_Speed
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327514887507030969, guid: d2df3701d4f072b40bd123545d914ea2, type: 3}
+      propertyPath: m_Radius
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5327514887507030970, guid: d2df3701d4f072b40bd123545d914ea2, type: 3}
       propertyPath: m_IsTrigger
       value: 1
