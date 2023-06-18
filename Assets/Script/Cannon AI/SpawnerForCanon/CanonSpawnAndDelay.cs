@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CanonSpawnAndDelay : MonoBehaviour
 {
+
+    public SearchAndDestroy SnD;
     [SerializeField]
     private GameObject CanonBall;
     [SerializeField]
@@ -16,10 +18,11 @@ public class CanonSpawnAndDelay : MonoBehaviour
 
   private void CanonBallSpawn()
   {
+    if (SnD.dead == false)
+    {
     Instantiate(CanonBall, transform.position ,Quaternion.identity);
     Invoke("CanonBallSpawn",SpawnInterfal);
+    }
   }
-
-
 }
 

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class SearchAndDestroy : MonoBehaviour
 {
-    bool dead = false;
+    public bool dead = false;
 
-    private void OnCollisionEnter(Collision other) 
+    private void OnTriggerEnter(Collider other)
     {
         string ObjectTag = other.gameObject.tag;
         if (ObjectTag == "enemy")
