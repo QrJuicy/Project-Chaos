@@ -17,17 +17,17 @@ public class Controls : MonoBehaviour
 
     void Update()
     {
-        Vector3 move = new Vector3 (Input.GetAxis("Horizontal") , 0 , Input.GetAxis("Vertical")).normalized;
+        Vector3 move = new Vector3 (Input.GetAxisRaw("Horizontal") , 0 , Input.GetAxisRaw("Vertical")).normalized;
         movement = move * Time.deltaTime * speed;
         movement += new Vector3 (0 , gravity * Time.deltaTime , 0);
         ctrl.Move(movement);              
 
-        if(Input.GetAxis("Horizontal") > 0)
+        if(Input.GetAxisRaw("Horizontal") > 0)
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if(Input.GetAxis("Horizontal") < 0)
+        if(Input.GetAxisRaw("Horizontal") < 0)
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
         }    
