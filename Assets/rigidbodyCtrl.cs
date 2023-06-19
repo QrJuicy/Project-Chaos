@@ -24,7 +24,7 @@ public class rigidbodyCtrl : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
        movement = new Vector3((horizontalInput), 0f ,(verticalInput));
-       Vector3 MoveVector = Time.deltaTime * trans.TransformDirection(movement) * speed;
+       Vector3 MoveVector = trans.TransformDirection(movement) * speed;
        rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
         if(Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
@@ -35,6 +35,7 @@ public class rigidbodyCtrl : MonoBehaviour
         {
             anim.SetTrigger("running");
         }
+
 
         if(Input.GetAxis("Horizontal") > 0)
         {

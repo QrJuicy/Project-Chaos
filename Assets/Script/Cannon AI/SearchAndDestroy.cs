@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class SearchAndDestroy : MonoBehaviour
 {
     public bool dead = false;
+    public GameObject deathsprt;
+    public Transform transSprite;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,7 @@ public class SearchAndDestroy : MonoBehaviour
             {
                 Debug.Log("got hit");
                 Destroy(this.gameObject);
+                Instantiate(deathsprt, transSprite.position, Quaternion.identity);
                 dead = true;
             }
         }
