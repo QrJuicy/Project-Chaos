@@ -16,12 +16,7 @@ public class UI : MonoBehaviour
     {
         start = true;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
     void deathUI()
     {
         resUI.SetActive(true);
