@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CanonSpawnAndDelay : MonoBehaviour
 {
-
+    private bool balls = false;
+    public UI ui;
     public SearchAndDestroy SnD;
     [SerializeField]
     private GameObject CanonBall;
@@ -13,7 +14,16 @@ public class CanonSpawnAndDelay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CanonBallSpawn();
+        
+    }
+
+    void Update()
+    {
+      if(ui.start == true && balls == false)
+      {
+        balls = true;
+          CanonBallSpawn();
+      }
     }
 
   private void CanonBallSpawn()

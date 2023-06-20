@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SearchAndDestroy : MonoBehaviour
 {
+    public UI ui;
     public bool dead = false;
     public GameObject deathsprt;
     public Transform transSprite;
@@ -20,6 +21,7 @@ public class SearchAndDestroy : MonoBehaviour
                 Destroy(this.gameObject);
                 Instantiate(deathsprt, transSprite.position, Quaternion.identity);
                 dead = true;
+                ui.respawnTimer();
             }
         }
 

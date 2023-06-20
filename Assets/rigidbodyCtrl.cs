@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class rigidbodyCtrl : MonoBehaviour
 {
+    public UI ui;
     [SerializeField] Rigidbody rb;
     private Transform trans;
     public float speed;
@@ -21,32 +22,38 @@ public class rigidbodyCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ui.start == true)
+        {
+            RBMovement();
+        }
+    }
+
+    private void RBMovement()
+    {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
-       movement = new Vector3((horizontalInput), 0f ,(verticalInput));
-       Vector3 MoveVector = trans.TransformDirection(movement) * speed;
-       rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
+        movement = new Vector3((horizontalInput), 0f, (verticalInput));
+        Vector3 MoveVector = trans.TransformDirection(movement) * speed;
+        rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
 
-        if(Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
+        if (Input.GetAxis("Horizontal") == 0 && Input.GetAxis("Vertical") == 0)
         {
             anim.SetTrigger("idle");
-        } 
+        }
         else
         {
             anim.SetTrigger("running");
         }
 
 
-        if(Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0)
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        if(Input.GetAxis("Horizontal") < 0)
+        if (Input.GetAxis("Horizontal") < 0)
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
-        }   
-
-        
+        }
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class CannonAI : MonoBehaviour
 {
-
+    
+    public UI ui;
     public SearchAndDestroy SnD;
     [SerializeField] private Transform movePos;
     private NavMeshAgent navMeshAgent;
@@ -18,7 +19,7 @@ public class CannonAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SnD.dead == false)
+        if (SnD.dead == false && ui.start == true)
         {
             navMeshAgent.destination = movePos.position;
         }
