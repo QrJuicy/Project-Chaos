@@ -25,4 +25,8 @@ public class UI : MonoBehaviour
     {
         Invoke("deathUI", 4f);
     }
+    public void QuitToTitle()
+    {
+        Application.Quit();
+    }
 }
