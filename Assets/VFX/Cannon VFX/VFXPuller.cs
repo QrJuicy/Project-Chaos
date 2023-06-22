@@ -21,9 +21,10 @@ public class VFXPuller : MonoBehaviour
         VisualEffect newSpawnedVFX = Instantiate(_Pull_From_PreFab, transform.position, transform.rotation);
         //play vfx
         newSpawnedVFX.Play();
-        _Add_SFX.Play();
+        
         //destroy vfx
         Destroy(newSpawnedVFX.gameObject, 5f);
-        
+        if(_Add_SFX == null) return;
+        _Add_SFX.Play();
     }
 }
