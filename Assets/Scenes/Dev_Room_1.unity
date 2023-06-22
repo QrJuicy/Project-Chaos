@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028417, g: 0.2257148, b: 0.30692318, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028395, g: 0.22571428, b: 0.3069225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3385,7 +3385,7 @@ AudioSource:
   m_GameObject: {fileID: 310096963}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 4076b2be68c3b284bbbc08bb05aa6af9, type: 2}
   m_audioClip: {fileID: 8300000, guid: ade8542389408e3479837e8957f85167, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -8909,12 +8909,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1713652196}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1215374866}
+        m_TargetAssemblyTypeName: SoundSystem, Assembly-CSharp
+        m_MethodName: SetVolumeFromSlider
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &858025845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8541547931758309409, guid: 47acd2255c3685f42af887b405ee9c5e, type: 3}
@@ -10198,7 +10210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28632396, y: 0.000000040382275, z: -0.000000012067651, w: 0.95813286}
+  m_LocalRotation: {x: 0.286324, y: -4.6394887e-15, z: 1.6757508e-15, w: 0.95813286}
   m_LocalPosition: {x: -148.1, y: 22.79, z: -137.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -12697,7 +12709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168738298}
-  m_LocalRotation: {x: 0.28632396, y: 0.000000040382275, z: -0.000000012067651, w: 0.95813286}
+  m_LocalRotation: {x: 0.286324, y: -4.6394887e-15, z: 1.6757508e-15, w: 0.95813286}
   m_LocalPosition: {x: -148.1, y: 22.79, z: -137.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -13041,6 +13053,7 @@ GameObject:
   - component: {fileID: 1215374862}
   - component: {fileID: 1215374861}
   - component: {fileID: 1215374865}
+  - component: {fileID: 1215374866}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -13147,6 +13160,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resUI: {fileID: 433106848}
   start: 0
+--- !u!114 &1215374866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215374860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae36adf81a1ce54dbf7e82232a9f687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundSlider: {fileID: 854833115}
+  masterMixer: {fileID: 24100000, guid: 4076b2be68c3b284bbbc08bb05aa6af9, type: 2}
 --- !u!1 &1218230898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3806705678106424435, guid: 47acd2255c3685f42af887b405ee9c5e, type: 3}
