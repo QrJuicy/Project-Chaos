@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028395, g: 0.22571428, b: 0.3069225, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028373, g: 0.22571404, b: 0.306922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -196,7 +196,7 @@ MeshCollider:
   m_GameObject: {fileID: 8590067468571969167}
   m_Material: {fileID: 13400000, guid: 36fc78b165cf7fb49bf55a7e0c79fef0, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -4404,7 +4404,7 @@ MeshCollider:
   m_GameObject: {fileID: 4699993841475082341}
   m_Material: {fileID: 13400000, guid: 36fc78b165cf7fb49bf55a7e0c79fef0, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -11188,7 +11188,7 @@ MeshCollider:
   m_GameObject: {fileID: 8106964773252147591}
   m_Material: {fileID: 13400000, guid: 36fc78b165cf7fb49bf55a7e0c79fef0, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -54128,6 +54128,7 @@ GameObject:
   - component: {fileID: 4766187078019003104}
   - component: {fileID: 7624786470237296668}
   - component: {fileID: 520715881}
+  - component: {fileID: 4699993841475082342}
   m_Layer: 0
   m_Name: temple 2
   m_TagString: Untagged
@@ -54135,6 +54136,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4699993841475082342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699993841475082341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013197018, y: 0.013197018, z: 0.029541511}
+  m_Center: {x: -0.00000000553337, y: -0.0000000073960154, z: 0.0040205754}
 --- !u!23 &4701409962803928780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -59219,6 +59233,7 @@ GameObject:
   - component: {fileID: 8103351891492246924}
   - component: {fileID: 7170688201788979441}
   - component: {fileID: 62414982}
+  - component: {fileID: 5426010397791328049}
   m_Layer: 0
   m_Name: temple 1
   m_TagString: Untagged
@@ -59226,6 +59241,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5426010397791328049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5426010397791328048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.013197018, y: 0.013197018, z: 0.029541511}
+  m_Center: {x: -0.0000000018080801, y: 5.4565144e-11, z: 0.0040205754}
 --- !u!4 &5432560970751961912
 Transform:
   m_ObjectHideFlags: 0
@@ -80300,6 +80328,7 @@ GameObject:
   - component: {fileID: 7434080433807777118}
   - component: {fileID: 4272622875588033611}
   - component: {fileID: 1243593739}
+  - component: {fileID: 8106964773252147592}
   m_Layer: 0
   m_Name: Cube.624
   m_TagString: Untagged
@@ -80307,6 +80336,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &8106964773252147592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106964773252147591}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027561016, y: 0.07711192, z: 0.04}
+  m_Center: {x: 0.00000006076399, y: 0.027350804, z: -0.000009868067}
 --- !u!23 &8107509784518628881
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -83545,13 +83587,27 @@ GameObject:
   - component: {fileID: 8493654263705063285}
   - component: {fileID: 385414175199785451}
   - component: {fileID: 5392668}
+  - component: {fileID: 8590067468571969168}
   m_Layer: 0
   m_Name: Cube.162
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!65 &8590067468571969168
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590067468571969167}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.027561016, y: 0.07711192, z: -0.04}
+  m_Center: {x: 0.00000003096167, y: 0.027350863, z: -0.000009869929}
 --- !u!33 &8590242627267591397
 MeshFilter:
   m_ObjectHideFlags: 0
